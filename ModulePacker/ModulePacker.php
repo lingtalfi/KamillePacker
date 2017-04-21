@@ -85,6 +85,6 @@ class ModulePacker extends AbstractPacker
 
     protected function getInstallerClassTargetRelativePath($name)
     {
-        return $name . "ModuleInstaller.php";
+        return $name . "Module.php";
     }
 }
