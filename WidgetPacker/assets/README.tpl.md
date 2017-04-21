@@ -53,7 +53,7 @@ $conf = [
     ],
     "widgets" => [
         "main.{name}" => [
-            "name" => "{name}/default",
+            "name" => "{Name}/default",
             "conf" => [
                 "code" => 404,
                 "text" => "Page not found",
