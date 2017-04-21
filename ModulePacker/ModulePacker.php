@@ -38,8 +38,6 @@ class ModulePacker extends AbstractPacker
                 }
             }
         }
-
-
     }
 
 

@@ -5,6 +5,7 @@ namespace KamillePacker\Packer;
 
 
 use Bat\FileSystemTool;
+use DirScanner\YorgDirScannerTool;
 use KamillePacker\Config\ConfigInterface;
 
 abstract class AbstractPacker
@@ -87,8 +88,26 @@ abstract class AbstractPacker
             FileSystemTool::mkfile($installerClassTarget, $c);
         }
 
-        $this->specificPack($name, $appDir, $updateMode, $itemTargetDir);
+        //--------------------------------------------
+        // FILES
+        //--------------------------------------------
+        $filesDir = $itemTargetDir . "/files/app";
+        if (is_dir($filesDir)) {
+            $appFiles = YorgDirScannerTool::getFiles($filesDir, true, true, false, false);
+            foreach ($appFiles as $f) {
+                $appFile = $appDir . "/" . $f;
+                $itemFile = $filesDir . "/" . $f;
+                if (file_exists($appFile)) {
+                    copy($appFile, $itemFile);
+                }
+            }
+        }
 
+
+        //--------------------------------------------
+        // SPECIFIC METHODS
+        //--------------------------------------------
+        $this->specificPack($name, $appDir, $updateMode, $itemTargetDir);
     }
     //--------------------------------------------
     //
