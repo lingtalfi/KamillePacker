@@ -89,7 +89,7 @@ abstract class AbstractPacker
         }
 
         //--------------------------------------------
-        // FILES
+        // FILES FORWARD MODE (from item to app)
         //--------------------------------------------
         $filesDir = $itemTargetDir . "/files/app";
         if (is_dir($filesDir)) {

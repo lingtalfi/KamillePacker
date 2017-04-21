@@ -38,6 +38,22 @@ class ModulePacker extends AbstractPacker
                 }
             }
         }
+
+
+
+        //--------------------------------------------
+        // FILES BACKWARD MODE (from app to item)
+        //--------------------------------------------
+        // lang
+        $langDir = $appDir . "/lang";
+        $dirs = YorgDirScannerTool::getDirs($langDir, false, true);
+        foreach($dirs as $lang){
+            $ctrlDir = $langDir . "/" . $lang . "/controllers/$name";
+            if(is_dir($ctrlDir)){
+                $itemDir = $itemTargetDir . "/files/app/lang/$lang/controllers/$name";
+                FileSystemTool::copyDir($ctrlDir, $itemDir);
+            }
+        }
     }
 
 

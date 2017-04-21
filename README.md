@@ -88,6 +88,10 @@ ModulePacker::create(Config::create()->set('appDir', $appDir))
 History Log
 ------------------
     
+- 1.3.0 -- 2017-04-21
+
+    - ModulePacker now supports lang files for controllers
+    
 - 1.2.0 -- 2017-04-21
 
     - AbstractPacker now handles the files/app mechanism
