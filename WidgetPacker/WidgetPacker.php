@@ -66,7 +66,7 @@ class WidgetPacker extends AbstractPacker
         // override this per implementation
         // here I'm doing the Widget implementation
 
-        $name = lcfirst($name);
+//        $name = lcfirst($name);
         $ret = [];
 
         $laws2CssFile = $appDir . "/www/theme/_default_/widgets/$name/$name.default.css";
