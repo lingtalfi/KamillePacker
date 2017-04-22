@@ -88,6 +88,10 @@ ModulePacker::create(Config::create()->set('appDir', $appDir))
 History Log
 ------------------
     
+- 1.5.0 -- 2017-04-22
+
+    - WidgetPacker now supports lang files for widgets
+    
 - 1.4.0 -- 2017-04-21
 
     - ModulePacker now supports laws files 

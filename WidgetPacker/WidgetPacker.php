@@ -5,6 +5,7 @@ namespace KamillePacker\WidgetPacker;
 
 
 use Bat\FileSystemTool;
+use DirScanner\YorgDirScannerTool;
 use KamillePacker\Packer\AbstractPacker;
 
 class WidgetPacker extends AbstractPacker
@@ -29,6 +30,23 @@ class WidgetPacker extends AbstractPacker
             $c = file_get_contents($path);
             FileSystemTool::mkfile($targetEntry, $c);
         }
+
+
+        //--------------------------------------------
+        // FILES BACKWARD MODE (from app to item)
+        //--------------------------------------------
+        // lang
+        $langDir = $appDir . "/lang";
+        $dirs = YorgDirScannerTool::getDirs($langDir, false, true);
+        foreach ($dirs as $lang) {
+            $widgetDir = $langDir . "/" . $lang . "/widgets/$name";
+            if (is_dir($widgetDir)) {
+                $itemDir = $itemTargetDir . "/files/app/lang/$lang/widgets/$name";
+                FileSystemTool::copyDir($widgetDir, $itemDir);
+            }
+        }
+
+
     }
 
 
