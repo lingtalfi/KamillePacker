@@ -88,6 +88,10 @@ ModulePacker::create(Config::create()->set('appDir', $appDir))
 History Log
 ------------------
     
+- 1.6.0 -- 2017-04-28
+
+    - changed default README.md for modules
+    
 - 1.5.0 -- 2017-04-22
 
     - WidgetPacker now supports lang files for widgets
