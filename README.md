@@ -88,6 +88,10 @@ ModulePacker::create(Config::create()->set('appDir', $appDir))
 History Log
 ------------------
     
+- 1.7.0 -- 2017-05-04
+
+    - add dataTable packer for module
+    
 - 1.6.0 -- 2017-04-28
 
     - changed default README.md for modules

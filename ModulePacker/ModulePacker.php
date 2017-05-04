@@ -62,6 +62,13 @@ class ModulePacker extends AbstractPacker
             FileSystemTool::copyDir($appLawsDir, $itemLawsDir);
         }
 
+        // dataTable profiles
+        $appSrc = $appDir . "/config/datatable-profiles/$name";
+        if (is_dir($appSrc)) {
+            $itemTarget = $itemTargetDir . "/files/app/config/datatable-profiles/$name";
+            FileSystemTool::copyDir($appSrc, $itemTarget);
+        }
+
     }
 
 
