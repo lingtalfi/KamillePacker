@@ -1,7 +1,7 @@
 <?php
 
 
-namespace KamillePacker\Config;
+namespace Ling\KamillePacker\Config;
 
 
 interface ConfigInterface

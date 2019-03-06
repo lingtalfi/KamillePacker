@@ -12,7 +12,7 @@ Install
 ==========
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
-uni import KamillePacker
+uni import Ling/KamillePacker
 ```
 
 Or just download it and place it where you want otherwise.
@@ -42,8 +42,8 @@ WidgetPacker example
 <?php
 
 use Kamille\Architecture\ApplicationParameters\ApplicationParameters;
-use KamillePacker\Config\Config;
-use KamillePacker\WidgetPacker\WidgetPacker;
+use Ling\KamillePacker\Config\Config;
+use Ling\KamillePacker\WidgetPacker\WidgetPacker;
 
 require_once __DIR__ . "/../boot.php";
 require_once __DIR__ . "/../init.php";
@@ -64,8 +64,8 @@ ModulePacker example
 <?php
 
 use Kamille\Architecture\ApplicationParameters\ApplicationParameters;
-use KamillePacker\Config\Config;
-use KamillePacker\ModulePacker\ModulePacker;
+use Ling\KamillePacker\Config\Config;
+use Ling\KamillePacker\ModulePacker\ModulePacker;
 require_once __DIR__ . "/../boot.php";
 require_once __DIR__ . "/../init.php";
 

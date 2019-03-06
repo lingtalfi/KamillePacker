@@ -1,7 +1,7 @@
 <?php
 
 
-namespace KamillePacker\Config\Exception;
+namespace Ling\KamillePacker\Config\Exception;
 
 
 class ConfigException extends \Exception

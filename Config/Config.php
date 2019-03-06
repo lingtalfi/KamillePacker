@@ -1,10 +1,10 @@
 <?php
 
 
-namespace KamillePacker\Config;
+namespace Ling\KamillePacker\Config;
 
 
-use KamillePacker\Config\Exception\ConfigException;
+use Ling\KamillePacker\Config\Exception\ConfigException;
 
 class Config implements ConfigInterface
 {

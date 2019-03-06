@@ -1,12 +1,12 @@
 <?php
 
 
-namespace KamillePacker\WidgetPacker;
+namespace Ling\KamillePacker\WidgetPacker;
 
 
-use Bat\FileSystemTool;
-use DirScanner\YorgDirScannerTool;
-use KamillePacker\Packer\AbstractPacker;
+use Ling\Bat\FileSystemTool;
+use Ling\DirScanner\YorgDirScannerTool;
+use Ling\KamillePacker\Packer\AbstractPacker;
 
 class WidgetPacker extends AbstractPacker
 {
